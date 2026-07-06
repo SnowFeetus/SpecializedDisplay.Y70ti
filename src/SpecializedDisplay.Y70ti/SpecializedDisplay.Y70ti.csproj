@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <!-- AnyCPU: the profile carries no <Platforms>/<PlatformTarget>. The consuming app stays
          PlatformTarget=x64 and governs the process (see README "Supported platforms"). -->
   </PropertyGroup>

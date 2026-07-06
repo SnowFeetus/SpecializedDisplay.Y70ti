@@ -18,3 +18,9 @@ The profile references both `SpecializedDisplay` and `SpecializedDisplay.Touch`,
 `Action<SpecializedDisplay.Touch.LogLevel, string>?` in the `CreateTouchSource` signature to resolve the
 ambiguity (a `using LogLevel = …` alias did not override the namespace-imported name). No public-API
 impact — the parameter type is exactly what `RawTouchSource` expects.
+
+## 3. `TreatWarningsAsErrors` enabled on both projects
+
+DESIGN §1's csproj sketch lists only `TargetFramework` / `Nullable` / `ImplicitUsings` / `LangVersion`.
+Both projects additionally set `<TreatWarningsAsErrors>true</TreatWarningsAsErrors>` per the team lead's
+build-convention request. The build is clean under it (0 warnings).
