@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.22621.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <!-- AnyCPU: the profile carries no <Platforms>/<PlatformTarget>. The consuming app stays
+         PlatformTarget=x64 and governs the process (see README "Supported platforms"). -->
+  </PropertyGroup>
+
+  <!-- Cross-repo consumption via sibling ProjectReference (DESIGN.md §1): clone the four repos as
+       siblings under one parent. A later switch to nuget.org packages is planned. -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SpecializedDisplay.NET\src\SpecializedDisplay\SpecializedDisplay.csproj" />
+    <ProjectReference Include="..\..\..\SpecializedDisplay.Touch\src\SpecializedDisplay.Touch\SpecializedDisplay.Touch.csproj" />
+  </ItemGroup>
+
+</Project>
